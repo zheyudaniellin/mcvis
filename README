@@ -1,0 +1,30 @@
+use this directory to conduct fitting with visibilities
+I'll use dynesty (or maybe emcee later on) to sample the probabilities
+
+
+copy tools from pdspy. don't import pdspy as a module
+
+
+
+The structure of this directory is as follows
+
+- models
+    - model1.py
+    - model2.py
+    ...
+
+- projects
+    - project1
+    - project2
+    ...
+
+- setup.py
+- mcvis
+    - __init__.py
+    ...
+
+
+Store the models in the models directory, because in some cases, we may want to call the model from elsewhere. Multiple projects may want to use the same model. 
+
+
+compile the mcvis first with setup.py
