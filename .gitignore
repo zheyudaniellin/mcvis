@@ -1,0 +1,20 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+
+# stuff from mcvis
+radmc3d.out
+config.json
+
+# additional stuff
+notes_on_slurm.txt
+
+*.slurm
+job_log.out
