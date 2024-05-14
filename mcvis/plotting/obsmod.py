@@ -98,7 +98,11 @@ def plot2dvis(obs, ftm, quant=['real'], inx=0,
 
         cb.set_label(tag)
         del pc, cb, cax
- 
+
+    for ax in axes:
+        ax.axhline(y=0, color='grey', alpha=0.3)
+        ax.axvline(x=0, color='grey', alpha=0.3)
+
     if north == 'up':
         for ax in axes:
             ax.invert_xaxis()
@@ -173,6 +177,10 @@ def plot2dimg(obs, ftm,
         cb, cax = tools.set_colorbar_right(pc, ax, fig)
         cb.set_label(tag)
         del pc, cb, cax
+
+    for ax in axes:
+        ax.axhline(y=0, color='grey', alpha=0.3)
+        ax.axvline(x=0, color='grey', alpha=0.3)
 
     if north == 'up':
         for ax in axes:

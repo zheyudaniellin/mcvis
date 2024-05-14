@@ -69,7 +69,7 @@ def main():
             'Hc':{'free':True, 'value':5, 'limits':[2, 8], 'tag':r'$H_{c}$'},
             'hs':{'free':False, 'value':1.25, 'limits':[1, 1.5], 'tag':r'$h_{s}$'}, 
             'tau0':{'free':True, 'value':0.35, 'limits':[0.1,2.0], 'tag':r'$\tau_{0}$'}, 
-            'T0':{'free':True, 'value':30, 'limits':[1,200], 'tag':r'$T_{0}$'}, 
+            'T0':{'free':True, 'value':20, 'limits':[1,200], 'tag':r'$T_{0}$'}, 
             'q':{'free':False, 'value':0.5, 'limits':[0, 1], 'tag':r'$q$'},
             'mstar':{'free':False, 'value':0.46, 'limits':[0.3, 0.7], 'tag':r'$M_{*}$'}, 
             },
@@ -86,5 +86,5 @@ def plot():
     mcvis.pipeline.default_results()
 
 if __name__ == '__main__':
-    main()
+#    main()
     plot()

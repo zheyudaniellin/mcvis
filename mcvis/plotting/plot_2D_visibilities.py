@@ -37,8 +37,8 @@ def default_quant_scale(quant):
         scale = 1
         tag = 'Imaginary Part'
     elif quant == 'amp':
-        scale = 1e3
-        tag = 'Amplitude [mJy]'
+        scale = 1
+        tag = 'Amplitude [Jy]'
     elif quant == 'phase':
         scale = 1.0
         tag = 'Phase [rad]'

@@ -62,7 +62,6 @@ def main():
         # parameters for the physical model and others that needs to be fitted
         "parameters": {
             'dRA':{'free':True, 'value':0, 'limits':[-0.5,0.5], 'tag':r'$\Delta$ RA'},
-
             'dDec':{'free':True, 'value':0, 'limits':[-0.5,0.5], 'tag':r'$\Delta$ Dec'},
             'PA':{'free':True, 'value':0, 'limits':[-30, 30], 'tag':'PA'},
             'incl':{'free':True, 'value':90, 'limits':[80, 110], 'tag':r'$i$'},
@@ -89,5 +88,5 @@ def plot():
     mcvis.pipeline.default_results()
 
 if __name__ == '__main__':
-    main()
+#    main()
     plot()

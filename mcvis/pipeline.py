@@ -166,12 +166,20 @@ def default_results():
     plt.close()
 
     # compare 2d visibilities
-    quant = ['real', 'imag']
-    figsize = (9, 3 * len(quant))
+    figsize = (9, 6)
     for i in range(len(config['visibilities']['file'])):
-        fig, axgrid = plotting.obsmod.plot2dvis(obs, ftm, quant=quant,
+        # real and imaginary part
+        fig, axgrid = plotting.obsmod.plot2dvis(obs, ftm, 
+                quant=['real', 'imag'],
                 inx=i, figsize=figsize, north='up')
-        fig.savefig(os.path.join(config['outdir'], 'obsmod_vis2d_%d.png'%i))
+        fig.savefig(os.path.join(config['outdir'], 'obsmod_vis2d_%d_complex.png'%i))
+        plt.close()
+
+        # amplitude and phase part
+        fig, axgrid = plotting.obsmod.plot2dvis(obs, ftm, 
+                quant=['amp', 'phase'],
+                inx=i, figsize=figsize, north='up')
+        fig.savefig(os.path.join(config['outdir'], 'obsmod_vis2d_%d_ampphase.png'%i))
         plt.close()
 
     # compare 2d images
